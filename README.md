@@ -1,0 +1,1 @@
+# ionic-safari-password-filler
