@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-navbar> <ion-title>Home</ion-title> </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form (submit)="login($event)" action="POST">
+    <div class="input-row">
+      <ion-item>
+        <ion-label floating>Username</ion-label>
+        <ion-input
+          name="username"
+          type="text"
+          autocapitalize="off"
+          [(ngModel)]="username"
+          (ionFocus)="inputFocus('user')"
+          (ionBlur)="inputBlur('user')"
+        >
+        </ion-input>
+      </ion-item>
+    </div>
+
+    <div class="input-row" [ngClass]="{ 'input-has-focus': passwordHasFocus }">
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input
+          name="password"
+          type="password"
+          [type]="showPassword ? 'text' : 'password'"
+          [(ngModel)]="password"
+          (ionFocus)="inputFocus('password')"
+          (ionBlur)="inputBlur('password')"
+        ></ion-input>
+      </ion-item>
+    </div>
+
+    <button ion-button full small clear class="login-button-hidden">
+      Sign In
+    </button>
+  </form>
+
+  <ion-grid class="login-buttons">
+    <ion-row>
+      <ion-col width-70>
+        <button
+          ion-button
+          full
+          small
+          clear
+          class="forgot-password"
+          (click)="forgotPassword()"
+        >
+          Forgot Password
+        </button>
+      </ion-col>
+      <ion-col width-70>
+        <button
+          ion-button
+          full
+          small
+          clear
+          [attr.disabled]="isFormValid() ? null : ''"
+          class="login-button-new"
+          (click)="login($event)"
+        >
+          Sign In
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

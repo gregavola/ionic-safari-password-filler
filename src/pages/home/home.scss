@@ -1,0 +1,224 @@
+page-home {
+  $content-padding: 32px;
+  $untappd-yellow: #ffc000;
+  $gray-dark: #6e706e;
+  $white: #fff;
+  $black: #000;
+
+  .login-button-hidden {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+  }
+
+  ion-content {
+    .scroll-content {
+      .login-buttons {
+        padding: 30px 0px 30px 0px !important;
+
+        .forgot-password {
+          padding-left: 0px !important;
+          padding-right: 3px !important;
+
+          span {
+            justify-content: flex-start !important;
+          }
+        }
+
+        .login-button-new {
+          padding-left: 3px !important;
+          padding-right: 0px !important;
+
+          &:disabled {
+            color: $gray-dark;
+          }
+
+          span {
+            justify-content: flex-end !important;
+          }
+        }
+      }
+    }
+  }
+
+  .login-details {
+    .button {
+      &.facebook-button {
+        margin-top: 10px !important;
+        margin-bottom: 0px !important;
+      }
+
+      &.login-button {
+        margin: 20px 0 12px !important;
+      }
+    }
+  }
+
+  .view-btn {
+    color: $white !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    ion-icon {
+      font-size: 30px;
+    }
+  }
+
+  .create-btn {
+    margin-top: 45px !important;
+  }
+
+  .content {
+    background-color: $black;
+    background-size: cover;
+    color: $white;
+    overflow: hidden; // disables scrolling
+    padding: $content-padding;
+    text-align: center;
+
+    .scroll-content,
+    .fixed-content {
+      top: 50% !important;
+      -ms-transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      bottom: auto;
+      left: 0;
+      right: 0;
+      contain: content;
+      padding: 0 16px 50px !important;
+      box-sizing: border-box;
+      overflow: hidden; // disables scrolling
+
+      @media only screen and (max-width: 320px) {
+        overflow: scroll !important;
+      }
+    }
+  }
+
+  .logo-img {
+    height: 132px;
+
+    @media only screen and (max-width: 320px) {
+      height: 72px;
+    }
+  }
+
+  .button-padding {
+    padding-top: 0px;
+    padding-bottom: 30px;
+  }
+
+  .button {
+    border-radius: 4px;
+
+    &.finger-print-reader {
+      color: $white;
+      text-transform: uppercase;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    &.forgot-password {
+      background: none;
+      color: $white;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      text-align: center;
+      text-transform: none;
+    }
+  }
+
+  .login-button {
+    height: 48px;
+    margin: 20px 0 12px !important;
+    color: $white;
+
+    &[disabled] {
+      background-color: $black;
+      color: $gray-dark;
+      opacity: 1;
+      pointer-events: none;
+    }
+  }
+
+  .button-fb-content {
+    padding-top: 16px;
+    margin: 10px auto;
+
+    .facebook-button {
+      font-size: 14px !important;
+      height: 48px !important;
+      margin-top: 10px !important;
+
+      ion-icon {
+        font-size: 32px;
+      }
+    }
+  }
+
+  .item {
+    background: transparent !important;
+    color: $white;
+    padding-left: 0px !important;
+    margin-top: 12px;
+
+    .text-input {
+      color: $white;
+      font-size: 17px;
+      font-weight: 600;
+      margin-top: 4px !important;
+    }
+
+    .label {
+      margin-bottom: 0;
+      margin-top: 0;
+      text-transform: capitalize;
+    }
+  }
+
+  .input-has-value {
+    .label {
+      color: $gray-dark !important;
+      margin-bottom: 0;
+    }
+  }
+
+  .input-has-focus {
+    .item-inner {
+      border-bottom-color: $untappd-yellow !important;
+      box-shadow: inset 0 -1px 0 0 $untappd-yellow !important;
+    }
+
+    .label {
+      color: $gray-dark !important;
+      margin-bottom: 0;
+    }
+  }
+
+  .input-row {
+    position: relative;
+  }
+
+  .input-icon {
+    height: 24px;
+    position: absolute;
+    left: 0;
+    top: 24px;
+  }
+
+  .footer {
+    .button {
+      border-radius: 0 !important;
+      color: $white;
+      font-size: 15px;
+      font-weight: bold;
+      height: 64px;
+      letter-spacing: -0.2px;
+      margin: 0;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+}
